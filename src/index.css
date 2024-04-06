@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+.navbar-bg {
+    background-color: white; /* set your desired background color */
+  }
+  
