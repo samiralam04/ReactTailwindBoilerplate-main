@@ -46,13 +46,35 @@ function Navbar() {
             >
               {/* Countdown Display */}
               {countdown > 0 && (
-                <span className="absolute left-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center animate-pulse text-xs  ml-2">
+                <span className="absolute left-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center animate-pulse text-xs ml-2">
                   {countdown} {/* Countdown number */}
                 </span>
               )}
               Quick Start
             </button>
           </div>
+        </div>
+        {/* Responsive Search Bar and Button for small screens */}
+        <div className="md:hidden mt-4">
+          {/* Search Bar */}
+          <input
+            type="text"
+            placeholder="Search my storyboards"
+            className="bg-gray-700 text-white rounded-md py-2 px-3 w-full focus:outline-none focus:bg-gray-600"
+          />
+          {/* Quick Start Button with Countdown */}
+          <button
+            className="bg-gray-700 text-white mt-2 w-full py-2 rounded-md text-sm font-medium relative flex items-center justify-center"
+            onClick={handleCountdown}
+          >
+            {/* Countdown Display */}
+            {countdown > 0 && (
+              <span className="absolute left-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center animate-pulse text-xs ml-2">
+                {countdown} {/* Countdown number */}
+              </span>
+            )}
+            Quick Start
+          </button>
         </div>
       </div>
     </nav>
