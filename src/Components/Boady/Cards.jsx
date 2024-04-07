@@ -305,31 +305,41 @@ const CardSection = () => {
               selectedStory &&
               selectedStory.id === story.id && (
                 <div className="absolute top-0 right-0 mt-2 mr-2">
-                  <button
-                    onClick={() => readStory(story)}
-                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded text-xs"
-                  >
-                    Read
-                  </button>
-                  <button
-                    onClick={() => editStory(story)}
-                    className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-1 px-2 rounded ml-1 text-xs"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => DownloadStory(story)}
-                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-2 rounded ml-1 text-xs"
-                  >
-                    Download
-                  </button>
-                  <button
-                    onClick={() => deleteStory(story)}
-                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 rounded ml-1 text-xs"
-                  >
-                    Delete
-                  </button>
-                </div>
+                <button
+                  onClick={() => readStory(story)}
+                  className={`bg-blue-500 text-white font-bold py-1 px-2 rounded text-xs ${
+                    !story.title ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
+                  }`}
+                  disabled={!story.title} // Disable button if the card is empty
+                >
+                  Read
+                </button>
+                <button
+                  onClick={() => editStory(story)}
+                  className={`bg-yellow-500 text-white font-bold py-1 px-2 rounded ml-1 text-xs ${
+                    !story.title ? "opacity-50 cursor-not-allowed" : "hover:bg-yellow-600"
+                  }`}
+                  disabled={!story.title} // Disable button if the card is empty
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => DownloadStory(story)}
+                  className={`bg-green-500 text-white font-bold py-1 px-2 rounded ml-1 text-xs ${
+                    !story.title ? "opacity-50 cursor-not-allowed" : "hover:bg-green-600"
+                  }`}
+                  disabled={!story.title} // Disable button if the card is empty
+                >
+                  Download
+                </button>
+                <button
+                  onClick={() => deleteStory(story)}
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 rounded ml-1 text-xs"
+                >
+                  Delete
+                </button>
+              </div>
+              
               )}
             {/* Edit content */}
             {story.showContent && (
