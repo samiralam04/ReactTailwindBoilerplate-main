@@ -376,7 +376,7 @@ const CardSection = () => {
                   />
                   <label
                     htmlFor="fileInput"
-                    className="cursor-pointer bg-gray-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-600 transition duration-300"
+                    className="cursor-pointer bg-gray-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-700 transition duration-300"
                   >
                     Choose File
                   </label>
