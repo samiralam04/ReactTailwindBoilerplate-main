@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Story-Board/static/css/main.6e7efb7f.css",
+    "main.js": "/Story-Board/static/js/main.3e128bb0.js",
+    "index.html": "/Story-Board/index.html",
+    "main.6e7efb7f.css.map": "/Story-Board/static/css/main.6e7efb7f.css.map",
+    "main.3e128bb0.js.map": "/Story-Board/static/js/main.3e128bb0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e7efb7f.css",
+    "static/js/main.3e128bb0.js"
+  ]
+}
